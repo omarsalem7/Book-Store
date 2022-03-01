@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from '../book/Book';
 
 const Books = () => {
-  const [books] = useState([
-    { id: 1, title: 'book1', author: 'omar' },
-    { id: 2, title: 'book2', author: 'salem' },
-  ]);
+  const books = useSelector((state) => state.books);
   return (
     <div className="books">
-      {books.map(({ id, title, author }) => (
-        <Book key={id} title={title} author={author} />
-      ))}
+      {books.length > 0 ? (
+        books.map(({ id, title, catagory }) => (
+          <Book key={id} id={id} title={title} catagory={catagory} />
+        ))
+      ) : (
+        <h4>No books In your Library</h4>
+      )}
     </div>
   );
 };
