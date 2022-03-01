@@ -1,0 +1,20 @@
+.header {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header li {
+  margin: 0 0.8%;
+}
+
+.title {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  color: rgb(78, 160, 236);
+}
+
+.active {
+  font-weight: bold;
+}

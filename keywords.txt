@@ -1,0 +1,1 @@
+to disable linter for file ==> /* eslint-disable */
