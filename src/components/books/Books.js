@@ -1,14 +1,27 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+// import React from 'react';
+// import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Book from '../book/Book';
+import { fetchBooks } from '../../redux/books/books';
 
 const Books = () => {
   const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, []);
   return (
     <div className="books">
       {books.length > 0 ? (
-        books.map(({ id, title, catagory }) => (
-          <Book key={id} id={id} title={title} catagory={catagory} />
+        books.map((book) => (
+          <Book
+            key={book.item_id}
+            id={book.item_id}
+            title={book.title}
+            category={book.category}
+          />
         ))
       ) : (
         <h4>No books In your Library</h4>
