@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from '../book/Book';
-import { fetchBooks } from '../../redux/books/books';
+// import { fetchBooks } from '../../redux/books/books';
 
 const Books = () => {
   const books = useSelector((state) => state.books);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchBooks());
-  }, []);
+  // useEffect(() => {
+  //   dispatch(fetchBooks());
+  // }, []);
   return (
     <>
       <div className="books" style={{ marginBottom: '50px' }}>

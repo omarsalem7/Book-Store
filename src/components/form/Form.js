@@ -11,13 +11,14 @@ const Form = () => {
     title: '',
     category: 'other',
   });
-  const uniqueId = uuid();
   const changeHandler = (e) => {
-    setData({ ...data, item_id: uniqueId, [e.target.name]: e.target.value });
+    setData({ ...data, [e.target.name]: e.target.value });
   };
   const dispatch = useDispatch();
 
   const addHandler = (e) => {
+    const uniqueId = uuid();
+    setData({ ...data, item_id: uniqueId });
     e.preventDefault();
     if (data.title) {
       fetch(
