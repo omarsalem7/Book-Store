@@ -1,17 +1,22 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Book Store
+This is a website to Display a list of books using an API, you can also add new book and removing it.
+
+## Built With
+
+- HTML
+- CSS
+- ReactJS
+- Redux
 
 ## Getting Started
 
 After Cloneing
 
-```
-cd "Your-Project"
-npm install
-npm start
-```
-
+`cd "Book-Store"`
+`npm install`
+`npm start`
 
 ## Authors
 
@@ -21,6 +26,11 @@ npm start
 - Twitter: [Omar Salem](https://twitter.com/Omar80491499)
 - LinkedIn: [Omar Salem](https://www.linkedin.com/in/omar-salem-a6945b177/)
 
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
