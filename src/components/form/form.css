@@ -1,0 +1,23 @@
+form {
+  display: flex;
+}
+
+select {
+  height: 40px;
+  margin-left: 20px;
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 5px;
+  width: 40%;
+}
+
+.add-btn {
+  padding: 7px;
+  background-color: #0290ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+  border-radius: 3px;
+  width: 20%;
+  margin-left: 25px;
+}
