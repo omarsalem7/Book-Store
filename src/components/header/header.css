@@ -1,20 +1,30 @@
-.header {
-  list-style: none;
+.header-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.header {
+  display: flex;
+  list-style: none;
 }
 
 .header li {
-  margin: 0 0.8%;
+  font-family: 'Kanit', sans-serif;
 }
 
-.title {
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  color: rgb(78, 160, 236);
+.header-item {
+  font-family: 'Kanit', sans-serif;
+  color: #0290ff;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin: -1.5% 2.9rem 0 0;
 }
 
 .active {
   font-weight: bold;
+}
+
+.logo {
+  margin: 1.8% 3% 0 0;
 }

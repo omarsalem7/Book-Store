@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300&display=swap');
+
+.book-container {
+  display: flex;
+  background-color: white;
+  position: relative;
+  padding: 2%;
+  margin: 20px;
+}
+
+.book-details {
+  flex-grow: 2;
+}
+
+.book-category {
+  color: #888;
+}
+
+.book-title {
+  font-family: 'Roboto Slab', serif;
+  margin-top: -15px;
+}
+
+.btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  color: #4386bf;
+  margin-right: 20px;
+}
+
+.btn:hover {
+  color: chocolate;
+}
+
+.vertical-line {
+  padding-left: 15px;
+  color: rgb(202, 200, 200);
+}
+
+.book-progress {
+  flex-grow: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-progress .svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 0.4rem;
+}
+
+.svg circle {
+  fill: transparent;
+  stroke: var(--gray-color);
+  stroke-width: 0.5rem;
+  stroke-dashoffset: 4.125rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.bar {
+  stroke: #4386bf !important;
+}
+
+.book-sperator {
+  flex-grow: 0.3;
+}
+
+.count {
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+}
+
+.count p {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.book-status {
+  margin-top: -50px;
+}
+
+.book-sperator-line {
+  background-color: rgb(214, 212, 212);
+  width: 1.7px;
+  height: 40%;
+  position: absolute;
+  top: 40%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.book-update-progress {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5% 0;
+}
+
+.progress-button {
+  width: 60%;
+  padding: 7px;
+  margin-top: 20px;
+  background-color: #0290ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+  border-radius: 3px;
+}

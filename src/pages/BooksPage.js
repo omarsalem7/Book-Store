@@ -1,9 +1,10 @@
 import React from 'react';
 import Books from '../components/books/Books';
 import Form from '../components/form/Form';
+import './booksPage.css';
 
 const BooksPage = () => (
-  <div>
+  <div className="books-page">
     <Books />
     <Form />
   </div>
