@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import { v4 as uuid } from 'uuid';
 import { useDispatch } from 'react-redux';
 import TextField from '@mui/material/TextField';
@@ -16,23 +17,29 @@ const Form = () => {
   };
   const dispatch = useDispatch();
 
-  const addHandler = (e) => {
+  const addHandler = async (e) => {
     const uniqueId = uuid();
     setData({ ...data, item_id: uniqueId });
     e.preventDefault();
-    if (data.title) {
-      fetch(
+    axios
+      .post(
         'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/4D7y39UkNgaQrWvdHrKq/books',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        },
-      );
-      dispatch(addBook(data));
-    }
+        data,
+      )
+      .then((res) => console.log(res));
+    // fetch(
+    //   'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/4D7y39UkNgaQrWvdHrKq/books',
+    //   {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json; Charset=UTF-8',
+    //     },
+    //     body: JSON.stringify(data),
+    //   },
+    // ).then((res) => console.log(res));
+    console.log(data);
+    dispatch(addBook(data));
+
     setData({ ...data, title: '' });
   };
 
