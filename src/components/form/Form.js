@@ -13,33 +13,18 @@ const Form = () => {
     category: 'other',
   });
   const changeHandler = (e) => {
-    setData({ ...data, [e.target.name]: e.target.value });
+    const uniqueId = uuid();
+    setData({ ...data, [e.target.name]: e.target.value, item_id: uniqueId });
   };
   const dispatch = useDispatch();
-
-  const addHandler = async (e) => {
-    const uniqueId = uuid();
-    setData({ ...data, item_id: uniqueId });
+  const addHandler = (e) => {
     e.preventDefault();
-    axios
-      .post(
-        'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/4D7y39UkNgaQrWvdHrKq/books',
-        data,
-      )
-      .then((res) => console.log(res));
-    // fetch(
-    //   'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/4D7y39UkNgaQrWvdHrKq/books',
-    //   {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json; Charset=UTF-8',
-    //     },
-    //     body: JSON.stringify(data),
-    //   },
-    // ).then((res) => console.log(res));
-    console.log(data);
-    dispatch(addBook(data));
+    axios.post(
+      'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/4D7y39UkNgaQrWvdHrKq/books',
+      data,
+    );
 
+    dispatch(addBook(data));
     setData({ ...data, title: '' });
   };
 
