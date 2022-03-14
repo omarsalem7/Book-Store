@@ -26,12 +26,12 @@ const Book = ({ id, title, category }) => {
           Remove
           <span className="vertical-line"> | </span>
         </button>
-        <button id={id} className="btn" type="button" onClick={removeHandler}>
+        <button id={id} className="btn" type="button">
           Comments
           {' '}
           <span className="vertical-line"> | </span>
         </button>
-        <button id={id} className="btn" type="button" onClick={removeHandler}>
+        <button id={id} className="btn" type="button">
           Edit
         </button>
       </div>
