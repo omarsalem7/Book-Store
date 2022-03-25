@@ -8,10 +8,17 @@ This is a website to Display a list of books using an API, you can also add new 
 
 ## Built With
 
-- HTML
-- CSS
-- ReactJS
-- Redux
+- Technologies used 
+  
+  ``` bash
+  - React 
+  - Redux
+  - CSS
+  - Linters
+  - Jest
+  - React testing library
+  - Git version control
+  ```
 
 ## Getting Started
 
