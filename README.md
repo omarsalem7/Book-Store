@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/V1-blueviolet)
+![](https://img.shields.io/badge/V1.0-blueviolet)
 
 # Book Store
 This is a website to Display a list of books using an API, you can also add new book and removing it.
